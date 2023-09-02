@@ -16,7 +16,7 @@
 :root {
   --main-bg-color: #000;
   --white-color: #fff;
-  --orange-color: #e24c00;
+  --orange-color: #18ffff;
 }
 body {
   background-color: var(--main-bg-color);
@@ -40,6 +40,7 @@ canvas {
 }
 .progress-bar {
   height: 5px;
+  --orange-color: rgb(23, 247, 255);
   background: var(--orange-color);
   width: 0%;
 }
@@ -69,16 +70,16 @@ canvas {
 .cursor-dot {
   width: 8px;
   height: 8px;
-  background-color: #dc5656;
+  background-color: #5cfaff;
 }
 .cursor-dot-outline {
   width: 20px;
   height: 20px;
-  background-color: rgba(229, 128, 128, 0.5);
+  background-color: rgba(128, 175, 229, 0.5);
 }
 .heading-with-effect h1 {
   font-size: 100px;
-  color: rgba(204, 203, 203, 0.26);
+  color: rgba(203, 204, 204, 0.26);
   font-weight: 900;
   text-transform: uppercase;
   margin-bottom: -10px;
@@ -111,6 +112,7 @@ canvas {
 }
 #socialnav ul:after {
   content: "";
+  --orange-color: rgb(23, 247, 255);
   background-color: var(--orange-color);
   position: absolute;
   width: 2px;
@@ -127,6 +129,7 @@ canvas {
   margin-bottom: -2px;
 }
 #socialnav a {
+  --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
   padding: 13px;
   border: 1px solid var(--orange-color);
@@ -139,6 +142,7 @@ canvas {
   font-size: 16px !important;
 }
 #socialnav a:hover {
+  --orange-color: rgb(23, 247, 255);
   background-color: var(--orange-color);
   border: 1px solid var(--orange-color);
   color: var(--white-color);
@@ -179,6 +183,7 @@ canvas {
 .landing-content {
   position: absolute;
   text-align: center;
+  --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
   top: 50%;
   left: 50%;
@@ -198,22 +203,26 @@ canvas {
   color: black;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
+  --orange-color: rgb(23, 247, 255);
   -webkit-text-stroke-color: var(--orange-color);
   transition: -webkit-text-stroke-color 0.5s ease-in !important;
   transition: -webkit-text-stroke-width 0.5s ease-in !important;
   transition: -webkit-text-stroke-width 0.5s ease-in !important;
 }
 .landing-content h1:nth-child(2):hover {
+  --orange-color: rgb(23, 247, 255);
   -webkit-text-fill-color: var(--orange-color);
   -webkit-text-stroke-color: transparent;
 }
 .landing-content a {
+  --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
   padding: 13px;
   border: 1px solid var(--orange-color);
   transition: 0.5s all ease-in;
 }
 .landing-content a:hover {
+  --orange-color: rgb(23, 247, 255);
   background-color: var(--orange-color);
   border: 1px solid var(--orange-color);
   color: var(--white-color);
@@ -256,11 +265,13 @@ canvas {
   margin-top: 80px;
 }
 .emphasis-words {
+  --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
   font-weight: 700;
   transition: all 0.5s ease-in;
 }
 .clubs-list {
+  --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
   font-family: "Poppins", sans-serif;
 }
@@ -287,12 +298,13 @@ canvas {
   }
 }
 .skill-box {
+  --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
   padding: 30px;
   margin-top: 130px;
   margin-bottom: 0px;
   transition: 0.5s all ease-in;
-  background-image: linear-gradient(to top, #e24c00 50%, transparent 50%);
+  background-image: linear-gradient(to top, #00dae2 50%, transparent 50%);
   background-size: 100% 180%;
   background-position: top;
   transition: all 0.5s ease-in;
@@ -315,7 +327,7 @@ canvas {
   border-bottom: 1px solid var(--white-color);
 }
 .skill-box:hover .emphasis-words {
-  color: #ccc !important;
+  color: #cccccc !important;
 }
 .skill-box i {
   font-size: 40px;
@@ -323,6 +335,7 @@ canvas {
 .skill-box h1 {
   text-align: center;
   font-size: 30px;
+  --orange-color: rgb(23, 247, 255);
   border-bottom: 1px solid var(--orange-color);
   margin-bottom: 7px;
   font-weight: bolder;
@@ -364,12 +377,13 @@ canvas {
   border-radius: 12px;
 }
 .project-img-col img:hover {
-  -webkit-box-shadow: 0px 6px 58px -8px rgba(224, 75, 0, 1);
-  -moz-box-shadow: 0px 6px 58px -8px rgba(224, 75, 0, 1);
-  box-shadow: 0px 6px 58px -8px rgba(224, 75, 0, 1);
+  -webkit-box-shadow: 0px 6px 58px -8px rgb(0, 224, 213);
+  -moz-box-shadow: 0px 6px 58px -8px rgb(0, 224, 205);
+  box-shadow: 0px 6px 58px -8px rgb(0, 224, 205);
 }
 #projects .row h1 {
   font-size: 50px;
+  --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
   font-weight: 900;
   text-transform: uppercase;
@@ -415,6 +429,7 @@ canvas {
 #contact form {
   margin-top: 100px;
   margin-bottom: 160px;
+  --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
 }
 #contact form input,
@@ -422,6 +437,7 @@ canvas {
   margin: 10px;
   background: none;
   border: none;
+  --orange-color: rgb(23, 247, 255);
   border-bottom: 1px solid var(--orange-color);
   outline: none;
   box-shadow: none;
@@ -434,7 +450,7 @@ textarea::-webkit-input-placeholder {
 }
 input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
-  color: #fc9866;
+  color: #66fcf4;
 }
 #contact form input :focus,
 #contact form textarea :focus,
@@ -445,6 +461,7 @@ textarea:focus::-webkit-input-placeholder {
 }
 #contact form a {
   background: none;
+  --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
   color: var(--orange-color);
   transition: 0.5s all ease-in;
@@ -453,6 +470,7 @@ textarea:focus::-webkit-input-placeholder {
   outline: none !important;
 }
 #contact form a:hover {
+  --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
   color: var(--white-color);
   background-color: var(--orange-color);
@@ -468,6 +486,7 @@ textarea:focus::-webkit-input-placeholder {
 }
 #halloffame h4,
 i {
+  --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
 }
 #halloffame i {
@@ -482,24 +501,28 @@ i {
 }
 #show-more {
   background: none;
+  --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
   color: var(--orange-color);
   transition: 0.5s all ease-in;
   width: 200px;
 }
 #show-more {
+  --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
   color: var(--white-color);
   background-color: var(--orange-color);
 }
 #hide-more {
   background: none;
+  --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
   color: var(--orange-color);
   transition: 0.5s all ease-in;
   width: 200px;
 }
 #hide-more {
+  --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
   color: var(--white-color);
   background-color: var(--orange-color);
@@ -515,12 +538,14 @@ html::-webkit-scrollbar {
 }
 html {
   scrollbar-width: thin;
+  --orange-color: rgb(23, 247, 255);
   scrollbar-color: var(--orange-color) var(--scrollbarBG);
 }
 html::-webkit-scrollbar-track {
   background: rgba(22, 22, 22, 0.829);
 }
 html::-webkit-scrollbar-thumb {
+  --orange-color: rgb(23, 247, 255);
   background-color: var(--orange-color);
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
