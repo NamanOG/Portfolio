@@ -275,8 +275,8 @@ canvas {
   color: var(--orange-color);
   font-family: "Poppins", sans-serif;
 }
-.somepaddingfromright {
-  padding-right: 140px;
+.somepaddingfromleft {
+  padding-left: 140px;
 }
 .namanpfp {
   margin-top: 80px;
@@ -289,7 +289,7 @@ canvas {
   border-radius: 30px;
 }
 @media (max-width: 850px) {
-  .somepaddingfromright {
+  .somepaddingfromleft {
     padding-left: 20px;
     padding-right: 20px;
   }
