@@ -1,5 +1,3 @@
-/*------------------------------------- Some Cool Fonts ----------------------------------------------------------------------- */
-
 @font-face {
   src: url("../fonts/Aclonica.ttf") format("woff2");
   font-family: "Aclonica";
@@ -15,13 +13,10 @@
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
-
-/*------------------------------------- Common Things!----------------------------------------------------------------------- */
-
 :root {
-  --main-bg-color: #000000;
+  --main-bg-color: #000;
   --white-color: #fff;
-  --orange-color: #30f8ff;
+  --orange-color: #18ffff;
 }
 body {
   background-color: var(--main-bg-color);
@@ -34,7 +29,6 @@ body {
 canvas {
   display: block;
 }
-
 .progress-container {
   position: fixed;
   top: 0;
@@ -76,15 +70,13 @@ canvas {
 .cursor-dot {
   width: 8px;
   height: 8px;
-  background-color: #56dcdc;
+  background-color: #5cfaff;
 }
 .cursor-dot-outline {
   width: 20px;
   height: 20px;
-  background-color: rgba(128, 205, 229, 0.5);
+  background-color: rgba(128, 175, 229, 0.5);
 }
-
-/* ---------------------------------------------Some effects which can be applied everywhere!---------------------------------------- */
 .heading-with-effect h1 {
   font-size: 100px;
   color: rgba(203, 204, 204, 0.26);
@@ -98,7 +90,7 @@ canvas {
   font-family: "Poppins", sans-serif;
   color: rgba(248, 248, 248, 0.849);
 }
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   .heading-with-effect h1 {
     font-size: 54px;
   }
@@ -113,83 +105,72 @@ canvas {
   left: -50px;
   bottom: 0px;
   transition: 0.5s all ease-in;
+  z-index: 1; /* Set a higher z-index to keep the icons above other content */
 }
+
 #socialnav ul {
   list-style: none;
   padding-left: 0 !important;
 }
-#socialnav ul:after {
-  content: "";
-  --orange-color: rgb(23, 247, 255);
-  background-color: var(--orange-color);
-  position: absolute;
-  width: 2px;
-  height: 150%;
-  top: -60px;
-  display: block;
-}
+
 #socialnav li {
-  margin: 30px;
-  margin-left: 0px;
-  margin-bottom: 35px;
-}
-#socialnav li:nth-last-child(n) {
-  margin-bottom: -2px;
-}
-#socialnav a {
-  --orange-color: rgb(23, 247, 255);
-  color: var(--orange-color);
-  padding: 13px;
-  border: 1px solid var(--orange-color);
-  transition: 0.5s all ease-in;
-}
-#socialnav .fa-facebook {
-  padding-right: 4.5px !important;
-}
-#socialnav .fa-envelope-o {
-  font-size: 16px !important;
-}
-#socialnav a:hover {
-  --orange-color: rgb(23, 247, 255);
   background-color: var(--orange-color);
-  border: 1px solid var(--orange-color);
-  color: var(--white-color);
-}
-#socialnav a i {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 10px auto; /* Center vertically and add spacing between bubbles */
   transition: 0.5s all ease-in;
-}
-#socialnav a:hover i {
-  color: var(--white-color);
-}
-#socialnav i {
-  font-size: 20px;
+  text-align: center; /* Center the icon and text vertically */
+  color: black; /* Icon color is black */
 }
 
-@media (max-width: 850px) {
+#socialnav a {
+  --orange-color: rgb(23, 247, 255);
+  color: black; /* Text color is black */
+  padding: 0;
+  transition: 0.5s all ease-in;
+  display: flex;
+  flex-direction: column; /* Display icon and text vertically */
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Make the link take up the full height of the bubble */
+}
+
+#socialnav a i {
+  transition: 0.5s all ease-in;
+  font-size: 20px;
+  color: black; /* Icon color is black */
+}
+
+#socialnav li:hover {
+  background-color: var(--white-color);
+}
+
+#socialnav li:hover a {
+  color: var(--orange-color);
+}
+
+@media (max-width: 768px) {
   #socialnav {
-    margin-bottom: 10px !important;
-  }
-  #socialnav ul:after {
-    top: -10px;
+     margin-bottom: 10px !important;
   }
   #socialnav .fa-facebook {
-    padding-right: 4.5px !important;
+     padding-right: 4.5px !important;
   }
   #socialnav a {
-    padding: 4px;
+     padding: 4px;
   }
   #socialnav i {
-    font-size: 15px;
+     font-size: 15px;
   }
   #socialnav li {
-    margin: 13px;
-    margin-left: 0;
+     margin: 13px;
+     margin-left: 0;
   }
   #socialnav .fa-envelope-o {
-    font-size: 12px !important;
+     font-size: 12px !important;
   }
 }
-/*----------------------------------------------------- Landing Page --------------------------------------------------------------------- */
 
 .landing-content {
   position: absolute;
@@ -220,13 +201,11 @@ canvas {
   transition: -webkit-text-stroke-width 0.5s ease-in !important;
   transition: -webkit-text-stroke-width 0.5s ease-in !important;
 }
-
 .landing-content h1:nth-child(2):hover {
   --orange-color: rgb(23, 247, 255);
   -webkit-text-fill-color: var(--orange-color);
   -webkit-text-stroke-color: transparent;
 }
-
 .landing-content a {
   --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
@@ -247,8 +226,7 @@ canvas {
   font-size: 20px;
   transition: 0.5s all ease-in;
 }
-
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   .landing-content h1:nth-child(1) {
     font-size: 20px;
     margin-bottom: -5px;
@@ -263,7 +241,6 @@ canvas {
     padding: 8px;
   }
 }
-
 .container {
   word-wrap: break-word;
   height: 900px;
@@ -276,7 +253,6 @@ canvas {
   margin-top: 140px;
   margin-bottom: 140px;
 }
-/*----------------------------------------------------- About us --------------------------------------------------------------------- */
 .about-content {
   margin-top: 80px;
 }
@@ -298,14 +274,13 @@ canvas {
   margin-top: 80px;
   width: 350px;
   opacity: 1;
-  border: 10px solid rgba(0, 181, 226, 0.35);
+  border: 10px solid rgba(0, 143, 226, 0.35);
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 30px;
 }
-
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   .somepaddingfromleft {
     padding-left: 20px;
     padding-right: 20px;
@@ -314,7 +289,6 @@ canvas {
     display: none;
   }
 }
-/*----------------------------------------------------- Skills --------------------------------------------------------------------- */
 .skill-box {
   --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
@@ -322,7 +296,7 @@ canvas {
   margin-top: 130px;
   margin-bottom: 0px;
   transition: 0.5s all ease-in;
-  background-image: linear-gradient(to top, #00b5e2 50%, transparent 50%);
+  background-image: linear-gradient(to top, #00dae2 50%, transparent 50%);
   background-size: 100% 180%;
   background-position: top;
   transition: all 0.5s ease-in;
@@ -345,9 +319,8 @@ canvas {
   border-bottom: 1px solid var(--white-color);
 }
 .skill-box:hover .emphasis-words {
-  color: #ccc !important;
+  color: #cccccc !important;
 }
-
 .skill-box i {
   font-size: 40px;
 }
@@ -372,7 +345,7 @@ canvas {
   min-height: 200px !important;
   max-height: 200px !important;
 }
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   .skill-box {
     margin: 30px;
   }
@@ -382,8 +355,6 @@ canvas {
     margin-left: 10px;
   }
 }
-
-/*--------------------------------------  Projects --------------------------------------------------- */
 #projects .heading-with-effect {
   margin-bottom: 100px;
 }
@@ -392,17 +363,16 @@ canvas {
 }
 .project-img-col img {
   width: 100%;
-  border: 2px solid rgba(0, 117, 226, 0.35);
+  border: 2px solid rgba(226, 76, 0, 0.35);
   margin: 10px;
   transition: 0.45s ease-in all;
   border-radius: 12px;
 }
 .project-img-col img:hover {
-  -webkit-box-shadow: 0px 6px 58px -8px rgb(0, 172, 224);
-  -moz-box-shadow: 0px 6px 58px -8px rgb(0, 153, 224);
-  box-shadow: 0px 6px 58px -8px rgb(0, 172, 224);
+  -webkit-box-shadow: 0px 6px 58px -8px rgb(0, 153, 224);
+  -moz-box-shadow: 0px 6px 58px -8px rgb(0, 190, 224);
+  box-shadow: 0px 6px 58px -8px rgb(0, 179, 224);
 }
-
 #projects .row h1 {
   font-size: 50px;
   --orange-color: rgb(23, 247, 255);
@@ -418,8 +388,7 @@ canvas {
 #projects .row p {
   text-align: right;
 }
-
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   #projects .heading-with-effect {
     margin-bottom: 30px;
   }
@@ -442,7 +411,6 @@ canvas {
   #projects .row img {
     align-self: center;
   }
-
   .project-img-col {
     margin-bottom: 40px;
     align-self: center;
@@ -450,8 +418,6 @@ canvas {
     padding-right: 20px;
   }
 }
-
-/*--------------------------------------Contact us --------------------------------------------------- */
 #contact form {
   margin-top: 100px;
   margin-bottom: 160px;
@@ -476,9 +442,8 @@ textarea::-webkit-input-placeholder {
 }
 input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
-  color: #66f7fc;
+  color: #66fcf4;
 }
-
 #contact form input :focus,
 #contact form textarea :focus,
 #contact form input :active,
@@ -496,14 +461,13 @@ textarea:focus::-webkit-input-placeholder {
   box-shadow: none !important;
   outline: none !important;
 }
-
 #contact form a:hover {
   --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
   color: var(--white-color);
   background-color: var(--orange-color);
 }
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   form {
     margin-right: 30px;
     margin-left: 30px;
@@ -527,7 +491,6 @@ i {
 #halloffame .col-md-4 {
   padding: 0px 50px;
 }
-
 #show-more {
   background: none;
   --orange-color: rgb(23, 247, 255);
@@ -536,7 +499,6 @@ i {
   transition: 0.5s all ease-in;
   width: 200px;
 }
-
 #show-more {
   --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
@@ -551,7 +513,6 @@ i {
   transition: 0.5s all ease-in;
   width: 200px;
 }
-
 #hide-more {
   --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
@@ -587,5 +548,5 @@ button {
 }
 .span_tech_stack {
   float: right;
-  font-family: Poppins, sans-serif;
+  font-family: 'poppins', sans-serif;
 }

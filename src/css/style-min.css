@@ -90,7 +90,7 @@ canvas {
   font-family: "Poppins", sans-serif;
   color: rgba(248, 248, 248, 0.849);
 }
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   .heading-with-effect h1 {
     font-size: 54px;
   }
@@ -105,81 +105,73 @@ canvas {
   left: -50px;
   bottom: 0px;
   transition: 0.5s all ease-in;
+  z-index: 1; /* Set a higher z-index to keep the icons above other content */
 }
+
 #socialnav ul {
   list-style: none;
   padding-left: 0 !important;
 }
-#socialnav ul:after {
-  content: "";
-  --orange-color: rgb(23, 247, 255);
-  background-color: var(--orange-color);
-  position: absolute;
-  width: 2px;
-  height: 150%;
-  top: -60px;
-  display: block;
-}
+
 #socialnav li {
-  margin: 30px;
-  margin-left: 0px;
-  margin-bottom: 35px;
+  background-color: var(--orange-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 10px auto; /* Center vertically and add spacing between bubbles */
+  transition: 0.5s all ease-in;
+  text-align: center; /* Center the icon and text vertically */
+  color: black; /* Icon color is black */
 }
-#socialnav li:nth-last-child(n) {
-  margin-bottom: -2px;
-}
+
 #socialnav a {
   --orange-color: rgb(23, 247, 255);
-  color: var(--orange-color);
-  padding: 13px;
-  border: 1px solid var(--orange-color);
+  color: black; /* Text color is black */
+  padding: 0;
   transition: 0.5s all ease-in;
+  display: flex;
+  flex-direction: column; /* Display icon and text vertically */
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Make the link take up the full height of the bubble */
 }
-#socialnav .fa-facebook {
-  padding-right: 4.5px !important;
-}
-#socialnav .fa-envelope-o {
-  font-size: 16px !important;
-}
-#socialnav a:hover {
-  --orange-color: rgb(23, 247, 255);
-  background-color: var(--orange-color);
-  border: 1px solid var(--orange-color);
-  color: var(--white-color);
-}
+
 #socialnav a i {
   transition: 0.5s all ease-in;
-}
-#socialnav a:hover i {
-  color: var(--white-color);
-}
-#socialnav i {
   font-size: 20px;
+  color: black; /* Icon color is black */
 }
-@media (max-width: 850px) {
+
+#socialnav li:hover {
+  background-color: var(--white-color);
+}
+
+#socialnav li:hover a {
+  color: var(--orange-color);
+}
+
+@media (max-width: 768px) {
   #socialnav {
-    margin-bottom: 10px !important;
-  }
-  #socialnav ul:after {
-    top: -10px;
+     margin-bottom: 10px !important;
   }
   #socialnav .fa-facebook {
-    padding-right: 4.5px !important;
+     padding-right: 4.5px !important;
   }
   #socialnav a {
-    padding: 4px;
+     padding: 4px;
   }
   #socialnav i {
-    font-size: 15px;
+     font-size: 15px;
   }
   #socialnav li {
-    margin: 13px;
-    margin-left: 0;
+     margin: 13px;
+     margin-left: 0;
   }
   #socialnav .fa-envelope-o {
-    font-size: 12px !important;
+     font-size: 12px !important;
   }
 }
+
 .landing-content {
   position: absolute;
   text-align: center;
@@ -234,7 +226,7 @@ canvas {
   font-size: 20px;
   transition: 0.5s all ease-in;
 }
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   .landing-content h1:nth-child(1) {
     font-size: 20px;
     margin-bottom: -5px;
@@ -288,7 +280,7 @@ canvas {
   box-sizing: border-box;
   border-radius: 30px;
 }
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   .somepaddingfromleft {
     padding-left: 20px;
     padding-right: 20px;
@@ -353,7 +345,7 @@ canvas {
   min-height: 200px !important;
   max-height: 200px !important;
 }
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   .skill-box {
     margin: 30px;
   }
@@ -396,7 +388,7 @@ canvas {
 #projects .row p {
   text-align: right;
 }
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   #projects .heading-with-effect {
     margin-bottom: 30px;
   }
@@ -475,7 +467,7 @@ textarea:focus::-webkit-input-placeholder {
   color: var(--white-color);
   background-color: var(--orange-color);
 }
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   form {
     margin-right: 30px;
     margin-left: 30px;
