@@ -2,33 +2,48 @@
   src: url("../fonts/Aclonica.ttf") format("woff2");
   font-family: "Aclonica";
 }
+
 @font-face {
   src: url("../fonts/Comfortaa-Light.ttf") format("woff2");
   font-family: "Comfortaa";
 }
+
 @font-face {
   src: url("../fonts/Poppins-ExtraLight.otf") format("woff2");
   font-family: "Poppins Extra Light";
 }
+
+@font-face {
+  src: url('../fonts/Exan.ttf') format("woff2");
+  font-family: 'Exan';
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
 :root {
   --main-bg-color: #000;
   --white-color: #fff;
   --orange-color: #18ffff;
 }
+
 body {
   background-color: var(--main-bg-color);
   color: var(--white-color);
   font-family: "Poppins Extra Light";
 }
+
 * {
   cursor: none;
 }
+
 canvas {
   display: block;
 }
+
 .progress-container {
   position: fixed;
   top: 0;
@@ -38,12 +53,14 @@ canvas {
   height: 5px;
   background: transparent;
 }
+
 .progress-bar {
   height: 5px;
   --orange-color: rgb(23, 247, 255);
   background: var(--orange-color);
   width: 0%;
 }
+
 #particles-js {
   width: 100vw;
   height: 100vh;
@@ -55,6 +72,7 @@ canvas {
   display: table-cell;
   vertical-align: middle;
 }
+
 .cursor-dot,
 .cursor-dot-outline {
   pointer-events: none;
@@ -67,16 +85,19 @@ canvas {
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   z-index: 1000;
 }
+
 .cursor-dot {
   width: 8px;
   height: 8px;
   background-color: #5cfaff;
 }
+
 .cursor-dot-outline {
   width: 20px;
   height: 20px;
   background-color: rgba(128, 175, 229, 0.5);
 }
+
 .heading-with-effect h1 {
   font-size: 100px;
   color: rgba(203, 204, 204, 0.26);
@@ -85,27 +106,32 @@ canvas {
   margin-bottom: -10px;
   font-family: "Poppins", sans-serif;
 }
+
 .heading-with-effect span {
   font-size: 20px;
   font-family: "Poppins", sans-serif;
   color: rgba(248, 248, 248, 0.849);
 }
+
 @media (max-width: 768px) {
   .heading-with-effect h1 {
     font-size: 54px;
   }
+
   .heading-with-effect span {
     font-size: 16px;
     font-family: "Poppins", sans-serif;
     color: rgba(248, 248, 248, 0.849);
   }
 }
+
 #socialnav {
   position: fixed;
   left: -50px;
   bottom: 0px;
   transition: 0.5s all ease-in;
-  z-index: 1; /* Set a higher z-index to keep the icons above other content */
+  z-index: 1;
+  /* Set a higher z-index to keep the icons above other content */
 }
 
 #socialnav ul {
@@ -118,28 +144,35 @@ canvas {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  margin: 10px auto; /* Center vertically and add spacing between bubbles */
+  margin: 10px auto;
+  /* Center vertically and add spacing between bubbles */
   transition: 0.5s all ease-in;
-  text-align: center; /* Center the icon and text vertically */
-  color: black; /* Icon color is black */
+  text-align: center;
+  /* Center the icon and text vertically */
+  color: black;
+  /* Icon color is black */
 }
 
 #socialnav a {
   --orange-color: rgb(23, 247, 255);
-  color: black; /* Text color is black */
+  color: black;
+  /* Text color is black */
   padding: 0;
   transition: 0.5s all ease-in;
   display: flex;
-  flex-direction: column; /* Display icon and text vertically */
+  flex-direction: column;
+  /* Display icon and text vertically */
   align-items: center;
   justify-content: center;
-  height: 100%; /* Make the link take up the full height of the bubble */
+  height: 100%;
+  /* Make the link take up the full height of the bubble */
 }
 
 #socialnav a i {
   transition: 0.5s all ease-in;
   font-size: 20px;
-  color: black; /* Icon color is black */
+  color: black;
+  /* Icon color is black */
 }
 
 #socialnav li:hover {
@@ -152,23 +185,28 @@ canvas {
 
 @media (max-width: 768px) {
   #socialnav {
-     margin-bottom: 10px !important;
+    margin-bottom: 10px !important;
   }
+
   #socialnav .fa-facebook {
-     padding-right: 4.5px !important;
+    padding-right: 4.5px !important;
   }
+
   #socialnav a {
-     padding: 4px;
+    padding: 4px;
   }
+
   #socialnav i {
-     font-size: 15px;
+    font-size: 15px;
   }
+
   #socialnav li {
-     margin: 13px;
-     margin-left: 0;
+    margin: 13px;
+    margin-left: 0;
   }
+
   #socialnav .fa-envelope-o {
-     font-size: 12px !important;
+    font-size: 12px !important;
   }
 }
 
@@ -182,12 +220,14 @@ canvas {
   transform: translate(-50%, -50%);
   font-family: "Comfortaa";
 }
+
 .landing-content h1:nth-child(1) {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   margin-bottom: -10px;
   font-size: 30px;
 }
+
 .landing-content h1:nth-child(2) {
   font-family: "Montserrat", sans-serif;
   font-size: 70px;
@@ -201,11 +241,13 @@ canvas {
   transition: -webkit-text-stroke-width 0.5s ease-in !important;
   transition: -webkit-text-stroke-width 0.5s ease-in !important;
 }
+
 .landing-content h1:nth-child(2):hover {
   --orange-color: rgb(23, 247, 255);
   -webkit-text-fill-color: var(--orange-color);
   -webkit-text-stroke-color: transparent;
 }
+
 .landing-content a {
   --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
@@ -213,38 +255,47 @@ canvas {
   border: 1px solid var(--orange-color);
   transition: 0.5s all ease-in;
 }
+
 .landing-content a:hover {
   --orange-color: rgb(23, 247, 255);
   background-color: var(--orange-color);
   border: 1px solid var(--orange-color);
   color: var(--white-color);
 }
+
 .landing-content a:hover i {
   color: var(--white-color);
 }
+
 .landing-content i {
   font-size: 20px;
   transition: 0.5s all ease-in;
 }
+
 @media (max-width: 768px) {
   .landing-content h1:nth-child(1) {
     font-size: 20px;
     margin-bottom: -5px;
   }
+
   .landing-content h1:nth-child(2) {
     font-size: 37px;
   }
+
   .landing-content i {
     font-size: 16px;
   }
+
   .landing-content a {
     padding: 8px;
   }
 }
+
 .container {
   word-wrap: break-word;
   height: 900px;
 }
+
 #about,
 #skills,
 #projects,
@@ -253,23 +304,28 @@ canvas {
   margin-top: 140px;
   margin-bottom: 140px;
 }
+
 .about-content {
   margin-top: 80px;
 }
+
 .emphasis-words {
   --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
   font-weight: 700;
   transition: all 0.5s ease-in;
 }
+
 .clubs-list {
   --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
   font-family: "Poppins", sans-serif;
 }
+
 .somepaddingfromleft {
   padding-left: 140px;
 }
+
 .namanpfp {
   margin-top: 80px;
   width: 350px;
@@ -280,15 +336,18 @@ canvas {
   box-sizing: border-box;
   border-radius: 30px;
 }
+
 @media (max-width: 768px) {
   .somepaddingfromleft {
     padding-left: 20px;
     padding-right: 20px;
   }
+
   .namanpfp {
     display: none;
   }
 }
+
 .skill-box {
   --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
@@ -303,27 +362,33 @@ canvas {
   min-height: 270px;
   border-radius: 8px 8px 0px 0px;
 }
+
 .skill-box:hover {
   background-size: 100% 200%;
   background-position: bottom;
   color: #000 !important;
 }
+
 .skill-box:hover i {
   transition: 0.3s all ease-in;
   color: var(--white-color);
 }
+
 .skill-box:hover h1 {
   text-align: center;
   font-size: 30px;
   transition: 0.5s all ease;
   border-bottom: 1px solid var(--white-color);
 }
+
 .skill-box:hover .emphasis-words {
   color: #cccccc !important;
 }
+
 .skill-box i {
   font-size: 40px;
 }
+
 .skill-box h1 {
   text-align: center;
   font-size: 30px;
@@ -333,10 +398,12 @@ canvas {
   font-weight: bolder;
   transition: all 0.5s ease-in;
 }
+
 .skill-box p {
   text-align: center;
   color: rgba(248, 248, 248, 0.658);
 }
+
 .skill-box-full {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -345,22 +412,27 @@ canvas {
   min-height: 200px !important;
   max-height: 200px !important;
 }
+
 @media (max-width: 768px) {
   .skill-box {
     margin: 30px;
   }
+
   .skill-box-full {
     width: 93%;
     margin: 30px;
     margin-left: 10px;
   }
 }
+
 #projects .heading-with-effect {
   margin-bottom: 100px;
 }
+
 .project-img-col {
   margin-bottom: 40px;
 }
+
 .project-img-col img {
   width: 100%;
   border: 2px solid rgba(226, 76, 0, 0.35);
@@ -368,11 +440,13 @@ canvas {
   transition: 0.45s ease-in all;
   border-radius: 12px;
 }
+
 .project-img-col img:hover {
   -webkit-box-shadow: 0px 6px 58px -8px rgb(0, 153, 224);
   -moz-box-shadow: 0px 6px 58px -8px rgb(0, 190, 224);
   box-shadow: 0px 6px 58px -8px rgb(0, 179, 224);
 }
+
 #projects .row h1 {
   font-size: 50px;
   --orange-color: rgb(23, 247, 255);
@@ -385,32 +459,40 @@ canvas {
   padding-bottom: 30px;
   padding-top: 60px;
 }
+
 #projects .row p {
   text-align: right;
 }
+
 @media (max-width: 768px) {
   #projects .heading-with-effect {
     margin-bottom: 30px;
   }
+
   #projects .row h1 {
     font-size: 30px;
     font-weight: 700;
     text-align: center;
   }
+
   #projects .row p {
     text-align: center;
   }
+
   #projects .row:nth-child(2n) {
     display: flex;
     flex-direction: column-reverse;
   }
+
   #projects .row {
     margin-left: 10px;
     margin-right: 10px;
   }
+
   #projects .row img {
     align-self: center;
   }
+
   .project-img-col {
     margin-bottom: 40px;
     align-self: center;
@@ -418,12 +500,14 @@ canvas {
     padding-right: 20px;
   }
 }
+
 #contact form {
   margin-top: 100px;
   margin-bottom: 160px;
   --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
 }
+
 #contact form input,
 #contact form textarea {
   margin: 10px;
@@ -435,15 +519,18 @@ canvas {
   box-shadow: none;
   color: white;
 }
+
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #fff;
   transition: 0.17s ease-in all;
 }
+
 input:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
   color: #66fcf4;
 }
+
 #contact form input :focus,
 #contact form textarea :focus,
 #contact form input :active,
@@ -451,6 +538,7 @@ textarea:focus::-webkit-input-placeholder {
   outline: none;
   box-shadow: none;
 }
+
 #contact form a {
   background: none;
   --orange-color: rgb(23, 247, 255);
@@ -461,36 +549,44 @@ textarea:focus::-webkit-input-placeholder {
   box-shadow: none !important;
   outline: none !important;
 }
+
 #contact form a:hover {
   --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
   color: var(--white-color);
   background-color: var(--orange-color);
 }
+
 @media (max-width: 768px) {
   form {
     margin-right: 30px;
     margin-left: 30px;
   }
+
   #contact {
     margin-top: 200px;
   }
 }
+
 #halloffame h4,
 i {
   --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
 }
+
 #halloffame i {
   font-size: 50px;
   margin-bottom: 20px;
 }
+
 #halloffame .row {
   padding-top: 100px;
 }
+
 #halloffame .col-md-4 {
   padding: 0px 50px;
 }
+
 #show-more {
   background: none;
   --orange-color: rgb(23, 247, 255);
@@ -499,12 +595,14 @@ i {
   transition: 0.5s all ease-in;
   width: 200px;
 }
+
 #show-more {
   --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
   color: var(--white-color);
   background-color: var(--orange-color);
 }
+
 #hide-more {
   background: none;
   --orange-color: rgb(23, 247, 255);
@@ -513,39 +611,48 @@ i {
   transition: 0.5s all ease-in;
   width: 200px;
 }
+
 #hide-more {
   --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
   color: var(--white-color);
   background-color: var(--orange-color);
 }
+
 .more-projects {
   display: none;
 }
+
 html {
   overflow-x: hidden;
 }
+
 html::-webkit-scrollbar {
   width: 4px;
 }
+
 html {
   scrollbar-width: thin;
   --orange-color: rgb(23, 247, 255);
   scrollbar-color: var(--orange-color) var(--scrollbarBG);
 }
+
 html::-webkit-scrollbar-track {
   background: rgba(22, 22, 22, 0.829);
 }
+
 html::-webkit-scrollbar-thumb {
   --orange-color: rgb(23, 247, 255);
   background-color: var(--orange-color);
   border-radius: 6px;
   border: 3px solid var(--scrollbarBG);
 }
+
 a,
 button {
   cursor: none !important;
 }
+
 .span_tech_stack {
   float: right;
   font-family: 'poppins', sans-serif;
