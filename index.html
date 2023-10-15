@@ -623,14 +623,14 @@
           <span>Get in touch!</span>
         </div>
         <form data-aos="fade-up" class="text-center" autocomplete="off" action="https://script.google.com/macros/s/AKfycbxj40UYZEy0Z4iQibqF1SIdYNX7jv3wGzRwy7_J790CkVw0cI1ATbHTl7NMiYuxOpRqyQ/exec" method="POST" id="contactForm">
-          <input name="Name" type="text" class="form-control" placeholder="Name" />
-          <input name="Email" type="email" class="form-control" placeholder="Email" />
-          <input name="Phone No" type="tel" class="form-control" placeholder="Phone Number" />
-          <textarea name="Message" class="form-control" rows="3" placeholder="Message"></textarea>
+          <input name="Name" type="text" class="form-control" placeholder="Name" required />
+          <input name="Email" type="email" class="form-control" placeholder="Email" required />
+          <input name="Phone No" type="tel" class="form-control" placeholder="Phone Number" required />
+          <textarea name="Message" class="form-control" rows="3" placeholder="Message" required></textarea>
           <button type="submit" class="btn btn-success">Submit</button>
         </form>
-      </div>
-      
+        <div id="submittedMessage" style="display: none;">Form submitted successfully!</div>
+      </div>      
 
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -661,23 +661,64 @@
     </script>
 
     <!-- Form Submission -->
+    <style>
+      /* Add CSS styles for the popup message */
+      #submittedMessage {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 128, 0, 0.8); /* Green background */
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        animation: fadeOut 3s ease-in-out; /* CSS animation for fading out */
+      }
+    
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+        }
+        70% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          display: none;
+        }
+      }
+    </style>
+    
     <script>
       document.getElementById('contactForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission
-
+    
         // You can add your form data handling and submission logic here
         // For example, you can use the fetch API to send the form data to a server.
-
+    
         // Replace the following lines with your specific logic.
         const formData = new FormData(this);
         // You can send this formData to your server or perform any other actions.
-
+    
+        // Display the submitted message
+        const submittedMessage = document.getElementById('submittedMessage');
+        submittedMessage.style.display = 'block';
+    
+        // Clear the form data
+        this.reset();
+    
+        // Add an event listener to hide the message after the animation completes
+        submittedMessage.addEventListener('animationend', function () {
+          submittedMessage.style.display = 'none';
+        });
+    
         console.log('Form submitted with the following data:');
         for (var pair of formData.entries()) {
           console.log(pair[0] + ': ' + pair[1]);
         }
       });
-    </script>
+    </script>    
 
     <script>
       var options = {
