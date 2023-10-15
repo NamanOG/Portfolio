@@ -49,6 +49,19 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exan">
+
+  <style>
+    /* Add animation to the input fields on focus */
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    textarea:focus {
+      border: 2px solid #3498db; /* Change the border color on focus */
+      transform: scale(1.05); /* Scale the input on focus */
+      transition: border 0.3s ease, transform 0.3s ease; /* Add smooth transition effect */
+    }
+  </style>
+  
   <title>Naman Bagdiya | Portfolio</title>
 </head>
 
@@ -607,17 +620,18 @@
       <div id="contact">
         <div class="heading-with-effect text-center" data-aos="fade-up">
           <h1>Contact</h1>
-          <span>Get in touch !</span>
+          <span>Get in touch!</span>
         </div>
-        <form data-aos="fade-up" class="text-center" autocomplete="off"
-          action="https://script.google.com/macros/s/AKfycbxj40UYZEy0Z4iQibqF1SIdYNX7jv3wGzRwy7_J790CkVw0cI1ATbHTl7NMiYuxOpRqyQ/exec" method="POST">
+        <form data-aos="fade-up" class="text-center" autocomplete="off" action="https://script.google.com/macros/s/AKfycbxj40UYZEy0Z4iQibqF1SIdYNX7jv3wGzRwy7_J790CkVw0cI1ATbHTl7NMiYuxOpRqyQ/exec" method="POST" id="contactForm">
           <input name="Name" type="text" class="form-control" placeholder="Name" />
           <input name="Email" type="email" class="form-control" placeholder="Email" />
-          <input name="Phone No" type="text" class="form-control" placeholder="Phone Number" />
+          <input name="Phone No" type="tel" class="form-control" placeholder="Phone Number" />
           <textarea name="Message" class="form-control" rows="3" placeholder="Message"></textarea>
-          <a type="submit" class="btn btn-success">Submit</a>
+          <button type="submit" class="btn btn-success">Submit</button>
         </form>
       </div>
+      
+
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -644,6 +658,25 @@
       gtag("js", new Date());
 
       gtag("config", "UA-162967534-2");
+    </script>
+
+    <!-- Form Submission -->
+    <script>
+      document.getElementById('contactForm').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // You can add your form data handling and submission logic here
+        // For example, you can use the fetch API to send the form data to a server.
+
+        // Replace the following lines with your specific logic.
+        const formData = new FormData(this);
+        // You can send this formData to your server or perform any other actions.
+
+        console.log('Form submitted with the following data:');
+        for (var pair of formData.entries()) {
+          console.log(pair[0] + ': ' + pair[1]);
+        }
+      });
     </script>
 
     <script>
