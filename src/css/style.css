@@ -657,3 +657,24 @@ button {
   float: right;
   font-family: 'poppins', sans-serif;
 }
+.scroll-to-top-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.arrow-container {
+  background-color: transparent; /* Set the background color to transparent */
+  color: #007BFF; /* Change this to your preferred text color */
+  border-radius: 0; /* Remove the border radius */
+  width: 60px; /* Adjust the size as needed */
+  height: 60px; /* Adjust the size as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow-container span {
+  font-size: 40px; /* Adjust the font size to make the Unicode character larger */
+}

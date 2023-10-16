@@ -622,7 +622,7 @@
           <h1>Contact</h1>
           <span>Get in touch!</span>
         </div>
-        <form data-aos="fade-up" class="text-center" autocomplete="off" action="https://script.google.com/macros/s/AKfycbxp2fLMPGTdBZbe4KhGNBBrIU2qGzOJ57EVim8S6IY3uS4bypte4D10eqFxyz1387Wf-Q/exec" method="POST" id="contactForm">
+        <form data-aos="fade-up" class="text-center" autocomplete="off" action="https://script.google.com/macros/s/AKfycbxiXdWvm977oZkvdDXgr7f7LcuOvMeFP9ymlap8IzGUCG2JYkqaTPmBrDu_IocSnWhEoA/exec" method="POST" id="contactForm">
           <input name="Name" type="text" class="form-control" placeholder="Name" required />
           <input name="Email" type="email" class="form-control" placeholder="Email" required />
           <input name="Phone No" type="tel" class="form-control" placeholder="Phone Number" required />
@@ -735,6 +735,39 @@
       var typed = new Typed("#typing-effect", options);
     </script>
 
+    <div class="scroll-to-top-container">
+      <div class="arrow-container">
+        <span>&#x1F680;</span>
+      </div>
+    </div>    
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var scrollButton = document.querySelector('.arrow-container');
+      scrollButton.style.display = 'none';
+  
+      // Show/hide the scroll-to-top button based on the user's scroll position
+      window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 100) {
+          scrollButton.style.display = 'block';
+        } else {
+          scrollButton.style.display = 'none';
+        }
+      });
+  
+      // Scroll to the top of the page when the button is clicked
+      scrollButton.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>  
+  
 </body>
 
 </html>
+<!-- 
+1. My form is not working as I'm submitting my response it's not showing up in my google form responses
+2. I can't find any error
+3. Url of the form is https://docs.google.com/forms/d/e/1FAIpQLSePrB0lfnXLim0ubbMyWFogdzsSKYtGtdgWxahcc3ezl-FgIA/viewform?usp=sf_link
+and web app url is https://script.google.com/macros/s/AKfycbxp2fLMPGTdBZbe4KhGNBBrIU2qGzOJ57EVim8S6IY3uS4bypte4D10eqFxyz1387Wf-Q/exec
+4. Please help  me find fixes else provide some alternative way to use my form -->
