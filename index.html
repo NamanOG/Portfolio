@@ -691,14 +691,14 @@
     </style>
     
     <script>
-      function submitForm(event) {
+      document.getElementById('contactForm').addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent the default form submission
     
         // You can add your form data handling and submission logic here
         // For example, you can use the fetch API to send the form data to your server.
     
         // Replace the following lines with your specific logic.
-        const formData = new FormData(document.getElementById('contactForm'));
+        const formData = new FormData(this);
         // You can send this formData to your server or perform any other actions.
     
         // Display the submitted message
@@ -715,9 +715,8 @@
         for (var pair of formData.entries()) {
           console.log(pair[0] + ': ' + pair[1]);
         }
-      }
-    </script>
-                       
+      });
+    </script>                 
 
     <script>
       var options = {
