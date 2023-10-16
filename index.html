@@ -622,7 +622,7 @@
           <h1>Contact</h1>
           <span>Get in touch!</span>
         </div>
-        <form data-aos="fade-up" class="text-center" autocomplete="off" action="https://getform.io/f/bdbfe9b4-772c-460d-bc9b-d80aa08d6281" method="POST" id="contactForm">
+        <form data-aos="fade-up" class="text-center" autocomplete="off" action="https://getform.io/f/bdbfe9b4-772c-460d-bc9b-d80aa08d6281" method="POST" id="contactForm" onsubmit="submitForm(event)">
           <input name="Name" type="text" class="form-control" placeholder="Name" required />
           <input name="Email" type="email" class="form-control" placeholder="Email" required />
           <input name="PhoneNumber" type="tel" class="form-control" placeholder="Phone Number" required />
@@ -691,14 +691,14 @@
     </style>
     
     <script>
-      document.getElementById('contactForm').addEventListener('submit', function (event) {
+      function submitForm(event) {
         event.preventDefault(); // Prevent the default form submission
     
         // You can add your form data handling and submission logic here
         // For example, you can use the fetch API to send the form data to your server.
     
         // Replace the following lines with your specific logic.
-        const formData = new FormData(this);
+        const formData = new FormData(document.getElementById('contactForm'));
         // You can send this formData to your server or perform any other actions.
     
         // Display the submitted message
@@ -711,17 +711,13 @@
           document.getElementById('contactForm').reset(); // Reset the form after the animation is complete
         });
     
-        // Simulate form submission after a short delay (for demonstration purposes)
-        setTimeout(function () {
-          document.getElementById('contactForm').submit();
-        }, 2000);
-    
         console.log('Form submitted with the following data:');
         for (var pair of formData.entries()) {
           console.log(pair[0] + ': ' + pair[1]);
         }
-      });
-    </script>                   
+      }
+    </script>
+                       
 
     <script>
       var options = {
