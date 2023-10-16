@@ -692,7 +692,7 @@
     
     <script>
       document.getElementById('contactForm').addEventListener('submit', function (event) {
-        // event.preventDefault(); // Commented out to allow default form submission behavior
+        event.preventDefault(); // Prevent the default form submission
     
         // You can add your form data handling and submission logic here
         // For example, you can use the fetch API to send the form data to your server.
@@ -705,12 +705,15 @@
         const submittedMessage = document.getElementById('submittedMessage');
         submittedMessage.style.display = 'block';
     
-        // Commenting out this line will prevent the form fields from being reset.
-        // this.reset();
+        // Do not reset the form immediately; store a reference to the form
+        const form = this;
     
         // Add an event listener to hide the message after the animation completes
         submittedMessage.addEventListener('animationend', function () {
           submittedMessage.style.display = 'none';
+    
+          // Reset the form after the animation is complete
+          form.reset();
         });
     
         console.log('Form submitted with the following data:');
@@ -718,9 +721,7 @@
           console.log(pair[0] + ': ' + pair[1]);
         }
       });
-    </script>
-    
-                
+    </script>           
 
     <script>
       var options = {
