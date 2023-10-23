@@ -7,9 +7,9 @@
   <title>Naman Bagdiya | Portfolio</title>
   <meta name="title" content="Naman Bagdiya | Portfolio" />
   <meta name="description"
-    content="Naman Bagdiya is a Creative developer (MEAN) from Raipur, Chhattisgarh. Naman ispursuing his undergraduate from RV Institute of Technology, Bangalore." />
+    content="Naman Bagdiya is a Creative developer from Raipur, Chhattisgarh. Naman is pursuing his undergraduate from RV Institute of Technology, Bangalore." />
   <meta name="keywords"
-    content="Naman Bagdiya, Creative Developer , Web Development Freelancer, RVITM, Web Developer , Freelancer" />
+    content="Naman Bagdiya, Creative Developer, Web Development, Freelancer, RVITM, Web Developer" />
   <meta name="robots" content="index, follow" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="language" content="English" />
@@ -50,8 +50,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exan">
 
+  <!-- Animation to the input fields on focus, while Hovering -->
   <style>
-    /* Add animation to the input fields on focus */
     input[type="text"]:focus,
     input[type="email"]:focus,
     input[type="tel"]:focus,
@@ -78,7 +78,6 @@
   </div>
   <div class="cursor-dot-outline"></div>
   <div class="cursor-dot"></div>
-
   <div id="particles-js"></div>
   <div class="landing-content">
     <h1 data-aos="zoom-in">Greetings,ㅤㅤ</h1>
@@ -236,18 +235,6 @@
         <h1>Projects</h1>
         <span>Projects I've worked on</span>
       </div>
-      <center><span>
-          <h3>To be added.....</h3>
-        </span></center>
-      <style>
-        .dotted {
-          border: 1px dotted #0014cc;
-          border-style: none none dotted;
-          color: #fff;
-          background-color: #fff;
-        }
-      </style>
-      <hr class='dotted' />
       <!---
         <div class="row text-center" data-aos="fade-up">
           <div class="col-md-7 col-sm-12 project-img-col">
@@ -265,28 +252,37 @@
               <span>Tech Stack : Html, Css, Js</span>
             </div>
           </div>
-        </div>
+        </div> -->
         <div class="row text-center" data-aos="fade-up">
           <div class="col-md-5 col-sm-12">
             <h1>CheerBot</h1>
             <p>
-              A Website made for College project regarding making youth's mental health better,
-              The Website consists of Homepage, Services, Shop, Contact us page.
-              It was a temperoroy website for the Project but webite can be used as an e-Commerce Website.
+              A website made for a college project aimed at improving the mental health of youth. 
+              The website consists of homepage, services, shop, and contact us pages. 
+              Initially, it was a temporary website for the project, but it can be used as an e-commerce website.
             </p>
             <div class="span_tech_stack">
               <span>Tech Stack : Html, CSS, Js</span>
             </div>
           </div>
           <div class="col-md-7 col-sm-12 project-img-col">
-            <a href="https://github.com/NamanOG/Cheerbot" target="_blank"
-              ><img
-                src="./src/img/projects/Cheerbot_cover.png"
-                alt="RVITMKZILLA RECRUITMENTS"
-            /></a>
+            <a href="https://github.com/NamanOG/Cheerbot" target="_blank">
+              <img src="./src/img/projects/Cheerbot_cover.png" alt="Cheerbot cover"/></a>
           </div>
         </div>
-        <div class="row text-center" data-aos="fade-up">
+        <center><span>
+          <h3>More To be added.....</h3>
+        </span></center>
+      <style>
+        .dotted {
+          border: 1px dotted #0014cc;
+          border-style: none none dotted;
+          color: #fff;
+          background-color: #fff;
+        }
+      </style>
+      <hr class='dotted' />
+        <!-- <div class="row text-center" data-aos="fade-up">
           <div class="col-md-7 col-sm-12 project-img-col">
             <a href=""
               ><img src="./src/img/projects/MILAN'20.jpg" alt="RVITM MILAN 2020"
@@ -632,11 +628,7 @@
         <div id="submittedMessage" style="display: none;">Form submitted successfully!</div>
       </div>      
 
-    </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    <6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
       crossorigin="anonymous"></script>
     <script>
       AOS.init();
@@ -662,7 +654,6 @@
 
     <!-- Form Submission -->
     <style>
-      /* Add CSS styles for the popup message */
       #submittedMessage {
         display: none;
         position: fixed;
@@ -692,20 +683,10 @@
     
     <script>
       document.getElementById('contactForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission
-    
-        // You can add your form data handling and submission logic here
-        // For example, you can use the fetch API to send the form data to your server.
-    
-        // Replace the following lines with your specific logic.
+        event.preventDefault(); 
         const formData = new FormData(this);
-        // You can send this formData to your server or perform any other actions.
-    
-        // Display the submitted message
         const submittedMessage = document.getElementById('submittedMessage');
         submittedMessage.style.display = 'block';
-    
-        // Add an event listener to hide the message after the animation completes
         submittedMessage.addEventListener('animationend', function () {
           submittedMessage.style.display = 'none';
           document.getElementById('contactForm').reset(); // Reset the form after the animation is complete
@@ -763,9 +744,3 @@
 </body>
 
 </html>
-<!-- 
-1. My form is not working as I'm submitting my response it's not showing up in my google form responses
-2. I can't find any error
-3. Url of the form is https://docs.google.com/forms/d/e/1FAIpQLSePrB0lfnXLim0ubbMyWFogdzsSKYtGtdgWxahcc3ezl-FgIA/viewform?usp=sf_link
-and web app url is https://script.google.com/macros/s/AKfycbxp2fLMPGTdBZbe4KhGNBBrIU2qGzOJ57EVim8S6IY3uS4bypte4D10eqFxyz1387Wf-Q/exec
-4. Please help  me find fixes else provide some alternative way to use my form -->
