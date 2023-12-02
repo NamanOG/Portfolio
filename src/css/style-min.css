@@ -310,9 +310,9 @@ canvas {
 }
 
 .emphasis-words {
-  --orange-color: rgb(23, 247, 255);
+  --orange-color: #1cfafa;
   color: var(--orange-color);
-  font-weight: 700;
+  font-weight: 800;
   transition: all 0.5s ease-in;
 }
 
@@ -355,7 +355,7 @@ canvas {
   margin-top: 130px;
   margin-bottom: 0px;
   transition: 0.5s all ease-in;
-  background-image: linear-gradient(to top, #00dae2 50%, transparent 50%);
+  background-image: linear-gradient(to top, rgba(23, 247, 255, 0.719) 50%, transparent 50%);
   background-size: 100% 180%;
   background-position: top;
   transition: all 0.5s ease-in;
