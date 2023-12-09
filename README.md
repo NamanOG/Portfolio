@@ -56,7 +56,7 @@ I'm always open to collaboration, new opportunities, and connecting with fellow 
 
 - **Email**: [Mail](mailto:namanbagdiya@outlook.com)
 - **LinkedIn**: [LinkedIn](https://www.linkedin.com/in/namanbagdiya)
-- **GitHub**: [GitHub](https://github.com/namanog)
+- **GitHub**: [GitHub](https://github.com/NamanOG)
 
 Let's connect and explore new possibilities together!
 
