@@ -49,6 +49,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exan">
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@1.0.0"></script>
 
   <style>
     /* Add animation to the input fields on focus */
@@ -66,6 +67,45 @@
   </style>
 
   <title>Naman Bagdiya | Portfolio</title>
+
+  <!-- resume Button CSS -->
+  <style>
+    .resume-button {
+        margin-top: 10px;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .resume-link {
+        color: #FF5733;
+        text-decoration: none;
+        font-family: 'Poppins';
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #333;
+        transition: background-color 0.3s ease;
+    }
+
+    .resume-link:hover {
+        background-color: #555;
+    }
+
+    .resume-link:active .confetti {
+        animation: burst 1s ease-out;
+    }
+
+    @keyframes burst {
+        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+    }
+
+</style>
+
 </head>
 
 <body onload="hideDiv()" background="/src/img/cosmos.png" background-repeat:="" no-repeat;="" background-position:=""
@@ -109,7 +149,7 @@
     <div id="socialnav">
       <ul>
         <li>
-          <a href="mailto:namanbagdiya@outlook.com">
+          <a href="mailto:hello@namanbagdiya.co">
             <i class="fa fa-envelope-o" aria-hidden="true"></i>
           </a>
         </li>
@@ -258,14 +298,14 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Win 11 UI Redesign -->
       <div class="row text-center project-row" data-aos="fade-up" style="margin-bottom: 20px;">
         <div class="col-md-5 col-sm-12">
           <h1 style="color: rgb(101, 255, 178);">CheerBot</h1>
           <p>
             A Website made for College project regarding making youth's mental health better,
-            The Website consists of Homepage, Services, Shop, Contact us page.
+            The Website consists of Homepage, Services, Shop, resume us page.
             It was a temperoroy website for the Project but webite can be used as an e-Commerce Website.
           </p>
           <div class="span_tech_stack">
@@ -294,23 +334,38 @@
       </style>
       <hr class="dotted">
 
-      <!-- Contact -->
-      <div id="contact">
+      <!-- resume -->
+      <div id="resume" class="text-center" style="padding-bottom: 130px;">
         <div class="heading-with-effect text-center aos-init" data-aos="fade-up">
-          <h1>Contact</h1>
-          <span>Get in touch!</span>
+            <h1>Connect</h1>
+            <span>Get in touch!</span>
         </div>
-        <form data-aos="fade-up" class="text-center aos-init" autocomplete="off"
-          action="https://getform.io/f/bdbfe9b4-772c-460d-bc9b-d80aa08d6281" method="POST" id="contactForm">
-          <input name="Name" type="text" class="form-control" placeholder="Name" required="">
-          <input name="Email" type="email" class="form-control" placeholder="Email" required="">
-          <input name="PhoneNumber" type="tel" class="form-control" placeholder="Phone Number" required="">
-          <textarea name="Message" class="form-control" rows="3" placeholder="Message" required=""></textarea>
-          <button type="submit" class="btn btn-success">Submit</button>
-        </form>
-        <div id="submittedMessage" style="display: none;">Form submitted successfully!</div>
-      </div>
-    </div>
+
+        <!-- resume Button -->
+<div style="text-align: center; font-family: 'Poppins'; color: #ffffff;">
+  <div class="resume-button">
+      <a href="/src/img/naman_resume.pdf" download="Naman_Bagdiya_Resume.pdf" class="resume-link" onclick="celebrate()">
+          <span class="icon">📄</span> Download Resume
+      </a>
+  </div>
+</div>
+
+<style>
+  .resume-link {
+      position: relative;
+  }
+
+  .resume-link .icon {
+      display: inline-block;
+      transition: transform 0.5s ease;
+  }
+
+  .resume-link:hover .icon {
+      transform: rotate(360deg);
+  }
+</style>
+</div>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -336,62 +391,15 @@
       gtag("config", "UA-162967534-2");
     </script>
 
-    <!-- Form Submission -->
-    <style>
-      /* Add CSS styles for the popup message */
-      #submittedMessage {
-        display: none;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(0, 128, 0, 0.8);
-        color: #fff;
-        padding: 10px;
-        border-radius: 5px;
-        animation: fadeOut 3s ease-in-out;
-        /* CSS animation for fading out */
-      }
-
-      @keyframes fadeOut {
-        0% {
-          opacity: 1;
-        }
-
-        70% {
-          opacity: 1;
-        }
-
-        100% {
-          opacity: 0;
-          display: none;
-        }
-      }
-    </style>
-
     <script>
-      document.getElementById('contactForm').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        const formData = new FormData(this);
-        // You can send this formData to your server or perform any other actions.
-
-        // Display the submitted message
-        const submittedMessage = document.getElementById('submittedMessage');
-        submittedMessage.style.display = 'block';
-
-        // Add an event listener to hide the message after the animation completes
-        submittedMessage.addEventListener('animationend', function () {
-          submittedMessage.style.display = 'none';
-          document.getElementById('contactForm').reset(); // Reset the form after the animation is complete
-        });
-
-        console.log('Form submitted with the following data:');
-        for (var pair of formData.entries()) {
-          console.log(pair[0] + ': ' + pair[1]);
-        }
-      });
-    </script>
+      function buttonHover(element, isHover) {
+          if (isHover) {
+              element.classList.add('pulsing');
+          } else {
+              element.classList.remove('pulsing');
+          }
+      }
+  </script>
 
     <script>
       var options = {
@@ -470,6 +478,7 @@
       }
     }
   </style>
+  <div id="confetti-container"></div>
 </body>
 
 </html>

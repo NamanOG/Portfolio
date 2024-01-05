@@ -300,7 +300,7 @@ canvas {
 #skills,
 #projects,
 #halloffame,
-#contact {
+#resume {
   margin-top: 140px;
   margin-bottom: 140px;
 }
@@ -501,15 +501,15 @@ canvas {
   }
 }
 
-#contact form {
+#resume form {
   margin-top: 100px;
   margin-bottom: 160px;
   --orange-color: rgb(23, 247, 255);
   color: var(--orange-color);
 }
 
-#contact form input,
-#contact form textarea {
+#resume form input,
+#resume form textarea {
   margin: 10px;
   background: none;
   border: none;
@@ -531,15 +531,15 @@ textarea:focus::-webkit-input-placeholder {
   color: #66fcf4;
 }
 
-#contact form input :focus,
-#contact form textarea :focus,
-#contact form input :active,
-#contact form textarea :active {
+#resume form input :focus,
+#resume form textarea :focus,
+#resume form input :active,
+#resume form textarea :active {
   outline: none;
   box-shadow: none;
 }
 
-#contact form a {
+#resume form a {
   background: none;
   --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
@@ -550,7 +550,7 @@ textarea:focus::-webkit-input-placeholder {
   outline: none !important;
 }
 
-#contact form a:hover {
+#resume form a:hover {
   --orange-color: rgb(23, 247, 255);
   border: 1px solid var(--orange-color);
   color: var(--white-color);
@@ -563,7 +563,7 @@ textarea:focus::-webkit-input-placeholder {
     margin-left: 30px;
   }
 
-  #contact {
+  #resume {
     margin-top: 200px;
   }
 }

@@ -14,7 +14,7 @@
 - [About](#about)
 - [Projects](#projects)
 - [Skills](#skills)
-- [Contact](#contact)
+- [resume](#resume)
 - [License](#license)
 
 ---
@@ -27,7 +27,7 @@ Explore my portfolio to discover:
 
 - **Projects**: Browse through the various projects I've worked on, from web applications to design creations.
 - **Skills**: Learn about the technologies, languages, and tools I'm proficient in.
-- **Contact**: Get in touch with me to collaborate, discuss projects, or simply connect.
+- **resume**: Get in touch with me to collaborate, discuss projects, or simply resume.
 
 ## Projects
 
@@ -50,19 +50,19 @@ My skill set spans various domains, including but not limited to:
 
 This portfolio showcases my proficiency in these areas and my commitment to continuous learning.
 
-## Contact
+## resume
 
-I'm always open to collaboration, new opportunities, and connecting with fellow developers, designers, and creators. Feel free to reach out:
+I'm always open to collaboration, new opportunities, and resumeing with fellow developers, designers, and creators. Feel free to reach out:
 
-- **Email**: [Mail](mailto:namanbagdiya@outlook.com)
+- **Email**: [Mail](mailto:hello@namanbagdiya.co)
 - **LinkedIn**: [LinkedIn](https://www.linkedin.com/in/namanbagdiya)
 - **GitHub**: [GitHub](https://github.com/NamanOG)
 
-Let's connect and explore new possibilities together!
+Let's resume and explore new possibilities together!
 
 ## License
 
 This portfolio is open-source and is licensed under the MIT License. You are welcome to explore, fork, and adapt it for your own use.
 
-Thank you for visiting my portfolio, and I look forward to connecting with you!
+Thank you for visiting my portfolio, and I look forward to resumeing with you!
 
