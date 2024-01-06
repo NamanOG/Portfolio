@@ -71,40 +71,46 @@
   <!-- resume Button CSS -->
   <style>
     .resume-button {
-        margin-top: 10px;
-        display: inline-block;
-        position: relative;
-        overflow: hidden;
+      margin-top: 10px;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
     }
 
     .resume-link {
-        color: #FF5733;
-        text-decoration: none;
-        font-family: 'Poppins';
-        cursor: pointer;
-        display: inline-block;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        background-color: #333;
-        transition: background-color 0.3s ease;
+      color: #FF5733;
+      text-decoration: none;
+      font-family: 'Poppins';
+      cursor: pointer;
+      display: inline-block;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: #333;
+      transition: background-color 0.3s ease;
     }
 
     .resume-link:hover {
-        background-color: #555;
+      background-color: #555;
     }
 
     .resume-link:active .confetti {
-        animation: burst 1s ease-out;
+      animation: burst 1s ease-out;
     }
 
     @keyframes burst {
-        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-        100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
-    }
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
 
-</style>
+      100% {
+        transform: translateY(-100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+  </style>
 
 </head>
 
@@ -337,35 +343,36 @@
       <!-- resume -->
       <div id="resume" class="text-center" style="padding-bottom: 130px;">
         <div class="heading-with-effect text-center aos-init" data-aos="fade-up">
-            <h1>Connect</h1>
-            <span>Get in touch!</span>
+          <h1>Connect</h1>
+          <span>Get in touch!</span>
         </div>
-    
+
         <!-- Resume Button -->
         <div style="text-align: center; font-family: 'Poppins'; color: #ffffff;">
-            <div class="resume-button">
-                <a href="/src/img/naman_resume.pdf" download="Naman_Bagdiya_Resume.pdf" class="resume-link" onclick="celebrate()">
-                    <span class="icon">📄</span> Download Resume
-                </a>
-            </div>
+          <div class="resume-button">
+            <a href="/src/img/naman_resume.pdf" download="Naman_Bagdiya_Resume.pdf" class="resume-link"
+              onclick="celebrate()">
+              <span class="icon">📄</span> Download Resume
+            </a>
+          </div>
         </div>
+      </div>
+
+      <style>
+        .resume-link {
+          position: relative;
+        }
+
+        .resume-link .icon {
+          display: inline-block;
+          transition: transform 0.5s ease;
+        }
+
+        .resume-link:hover .icon {
+          transform: rotate(360deg);
+        }
+      </style>
     </div>
-
-<style>
-  .resume-link {
-      position: relative;
-  }
-
-  .resume-link .icon {
-      display: inline-block;
-      transition: transform 0.5s ease;
-  }
-
-  .resume-link:hover .icon {
-      transform: rotate(360deg);
-  }
-</style>
-</div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -394,13 +401,13 @@
 
     <script>
       function buttonHover(element, isHover) {
-          if (isHover) {
-              element.classList.add('pulsing');
-          } else {
-              element.classList.remove('pulsing');
-          }
+        if (isHover) {
+          element.classList.add('pulsing');
+        } else {
+          element.classList.remove('pulsing');
+        }
       }
-  </script>
+    </script>
 
     <script>
       var options = {
